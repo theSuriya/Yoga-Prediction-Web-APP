@@ -9,14 +9,14 @@ from PIL import Image
 from io import BytesIO
 from keras.models import load_model
 from fastapi import Request
-
+import os
 
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="frontend/static"), name="static")
-
+full_path = 'C:\\Users\\thesu\Desktop\\sample_project_1\\api\my model\\yoga-modelv2.h5'
 templates = Jinja2Templates(directory="frontend")
-model = load_model('api\\my model\\yoga-modelv2.h5')
+model = load_model(full_path)
 class_name = ['Bridge Pose','Child-Pose','CobraPose','Downward Dog pose','Pigeon pose','Standing Mountain Pose','Tree Pose','Triangle Pose','Warrior Pose']
 
 
