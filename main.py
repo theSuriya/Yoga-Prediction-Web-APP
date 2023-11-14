@@ -59,4 +59,4 @@ async def prediction(file: UploadFile = File(...)):
 
 
 if __name__ == '__main__':
-    uvicorn.run(app, host='localhost', port=8500)
+    uvicorn.run(app, host='localhost', port=8501)
