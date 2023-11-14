@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Yoga Pose Prediction</title>
+</head>
+<body>
+    <h1>Yoga Pose Prediction</h1>
+    <form id="uploadForm" action="/predict" method="post" enctype="multipart/form-data">
+        <label for="file">Upload an image:</label>
+        <input type="file" name="file" id="fileInput" accept="image/*" required>
+        <button type="submit">Predict</button>
+    </form>
+    <div id="imagePreviewContainer">
+        <h3>Uploaded Image Preview</h3>
+        <img id="imagePreview" alt="Uploaded Image">
+    </div>
+    <div id="predictionResult"></div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
+
