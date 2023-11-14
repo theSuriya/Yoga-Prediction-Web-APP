@@ -16,7 +16,7 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="frontend/static"), name="static")
 
 templates = Jinja2Templates(directory="frontend")
-model = load_model('C:\\Users\\thesu\\Desktop\\sample_project_1\\api\\my model\\yoga-modelv2.h5')
+model = load_model('api\\my model\\yoga-modelv2.h5')
 class_name = ['Bridge Pose','Child-Pose','CobraPose','Downward Dog pose','Pigeon pose','Standing Mountain Pose','Tree Pose','Triangle Pose','Warrior Pose']
 
 
