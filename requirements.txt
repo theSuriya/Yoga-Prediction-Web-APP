@@ -1,6 +1,5 @@
 tensorflow==2.13.1
 numpy>=1.22,<1.25
-typing-extensions==4.8.0
 pydantic==2.5.0
 pydantic-core==2.14.1
 fastapi>=0.45.0
@@ -8,4 +7,4 @@ uvicorn==0.18.3
 python-multipart>=0.0.5,<1.0.0
 pillow==10.1.0
 tensorflow-serving-api>=2.7.0,<2.14.0
-
+typing-extensions
