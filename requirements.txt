@@ -1,5 +1,5 @@
 tensorflow==2.13.1
-numpy==1.24.4
+numpy>=1.22,<1.25
 typing-extensions==4.8.0
 pydantic==2.5.0
 pydantic-core==2.14.1
