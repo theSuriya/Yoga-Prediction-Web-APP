@@ -1,10 +1,8 @@
 tensorflow
 fastapi>=0.45.0
 uvicorn==0.18.3
-python-multipart>=0.0.5,<1.0.0
 pillow==10.1.0
-tensorflow-serving-api>=2.7.0,<2.14.0
 numpy==1.24.4
 pydantic>=1.8.2
-typing-extensions
+
 
