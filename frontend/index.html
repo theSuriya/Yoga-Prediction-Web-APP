@@ -1,24 +1,36 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/style.css">
-    <title>Yoga Pose Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="static/style.css?v=1">
+    <title>Yoga Pose</title>
 </head>
 <body>
-    <h1>Yoga Pose Prediction</h1>
-    <form id="uploadForm" action="/predict" method="post" enctype="multipart/form-data">
-        <label for="file">Upload an image:</label>
-        <input type="file" name="file" id="fileInput" accept="image/*" required>
-        <button type="submit">Predict</button>
-    </form>
-    <div id="imagePreviewContainer">
-        <h3>Uploaded Image Preview</h3>
-        <img id="imagePreview" alt="Uploaded Image">
+    <div class="header-container container">
+        <h1>Yoga Pose Classifier</h1>
     </div>
-    <div id="predictionResult"></div>
-    <script src="/static/script.js"></script>
+    <form id="uploadForm" action="/predict" method="post" enctype="multipart/form-data" class="container">
+        <div id="fileInputContainer">
+            <input type="file" name="file" id="fileInput" accept="image/*">
+            <label for="fileInput" id="fileInputLabel">
+                <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                Drag & Drop or Click to Upload
+            </label>
+        </div>
+        <div id="imageContainer" class="container">
+            <img id="imagePreview">
+        </div>
+        <div id="predictionResult" class="container"></div>
+        <button type="submit" class="predict-btn">Predict</button>
+    </form>
+    <script src="static/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
