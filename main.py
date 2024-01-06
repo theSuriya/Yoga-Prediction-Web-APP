@@ -54,6 +54,8 @@ def read_file_as_image(data):
 @app.post('/predict')
 async def prediction(file: UploadFile = File(...)):
 
+     print("Prediction endpoint called")
+     file.file.seek(0)
      img = read_file_as_image(await file.read())
      img = np.expand_dims(img, axis=0)
 
